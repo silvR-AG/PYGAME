@@ -18,7 +18,7 @@ background = pygame.image.load('background.jpg')
 
 
 #Title and icon
-pygame.display.set_caption(('THE GAME'))
+pygame.display.set_caption(('THE CAT&RAT'))
 icon=pygame.image.load('games-icon-png-4.png')
 pygame.display.set_icon((icon))
 
@@ -58,11 +58,19 @@ def player2(X,Y):
 
 #Text Display
 font=pygame.font.Font('freesansbold.ttf',100)
+font1=pygame.font.Font('freesansbold.ttf',32)
+font2=pygame.font.Font('freesansbold.ttf',20)
 textX = 300
 textY = 300
 def showText(X,Y):
     win = font.render('Player 1 Wins',True,(200,255,180))
     screen.blit(win, (X,Y))
+score_value = 0
+def showScore():
+    score = font1 .render("Score:" +str(score_value), True, (255,255,255))
+    screen.blit(score, (100,0))
+    exittext = font2.render("Close window to end the Game", True, (255,255,255))
+    screen.blit(exittext, (900,10))
 
 
 #Bullet fire function
@@ -147,10 +155,12 @@ while running:
     if collision:
         #print("Player 1 wins")
         showText(textX,textY)
+        score_value =+ 1
         # playerX = random.randint(111-1111)
         # playerY = random.randint(99,699)
         # player2X = random.randint(111,1111)
         # player2Y = random.randint(99,699)
+    showScore()
     pygame.display.update() #Update Screen each time window reopens
 
 
