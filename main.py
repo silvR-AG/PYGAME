@@ -155,7 +155,7 @@ while running:
     if collision:
         #print("Player 1 wins")
         showText(textX,textY)
-        score_value =+ 1
+        score_value += 1
         # playerX = random.randint(111-1111)
         # playerY = random.randint(99,699)
         # player2X = random.randint(111,1111)
