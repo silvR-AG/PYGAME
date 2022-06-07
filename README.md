@@ -1,4 +1,4 @@
-# PYGAME - Cat&Rat
+# PYGAME - The Cat&Rat
 
 ## Game Rules
   1. A two player game, player 1 being the pursuer (The Cat). Player two being the runner(The Rat).
